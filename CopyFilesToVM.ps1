@@ -4,7 +4,7 @@
     Edition    = 6
     VhdFormat  = "VHDX"
     DiskLayout = "UEFI"
-    SizeBytes  = 80GB
+    SizeBytes  = 100GB
     MemoryAmount = 8GB
     CPUCores = 2
     NetworkSwitch = "Default Switch"
