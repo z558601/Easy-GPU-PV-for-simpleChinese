@@ -4,9 +4,9 @@
     Edition    = 6
     VhdFormat  = "VHDX"
     DiskLayout = "UEFI"
-    SizeBytes  = 40GB
+    SizeBytes  = 80GB
     MemoryAmount = 8GB
-    CPUCores = 4
+    CPUCores = 2
     NetworkSwitch = "Default Switch"
     VHDPath = "C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks\"
     UnattendPath = "$PSScriptRoot"+"\autounattend.xml"
@@ -14,8 +14,8 @@
     GPUResourceAllocationPercentage = 50
     Team_ID = ""
     Key = ""
-    Username = "GPUVM"
-    Password = "CoolestPassword!"
+    Username = "Administrator"
+    Password = "123"
     Autologon = "true"
 }
 
@@ -4380,7 +4380,7 @@ param(
             Set-VMProcessor -VMName $VMName -ExposeVirtualizationExtensions $true
             }
         Set-VMHost -ComputerName $ENV:Computername -EnableEnhancedSessionMode $false
-        Set-VMVideo -VMName $VMName -HorizontalResolution 1920 -VerticalResolution 1080
+        Set-VMVideo -VMName $VMName -HorizontalResolution 1024 -VerticalResolution 768
         Set-VMKeyProtector -VMName $VMName -NewLocalKeyProtector
         Enable-VMTPM -VMName $VMName 
         Add-VMDvdDrive -VMName $VMName -Path $SourcePath
